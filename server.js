@@ -25,7 +25,7 @@ app.post('/api/generate', async (req, res) => {
   const { prompt } = req.body || {};
   if (!prompt) return res.status(400).send('Missing prompt');
 
-  const apiKey = process.env.GOOGLE_API_KEY || 'AIzaSyC_gmTugk-OcAxTUBb0SnHw8YOlAQryB48'; // Temporary fallback
+  const apiKey = process.env.GOOGLE_API_KEY ; // Temporary fallback
 
   // Try a couple of model names / endpoint variants if one returns 404
   const modelCandidates = [
